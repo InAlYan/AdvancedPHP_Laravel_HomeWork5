@@ -15,10 +15,18 @@
 
 По аналогии с приведённым выше примером создайте ещё несколько полей ввода. Например, поля «Фамилия работника», «Занимаемая должность» и «Адрес проживания». Обратите внимание, что у всех полей формы есть атрибут required=”true”. Это важно для полноты получаемых данных от клиента к серверу.
 
+---
+![form.blade.php](./storage/app/private/img/2_1.png "form.blade.php")
+
+---
+
 ### 3. Создайте новый контроллер с названием EmployeeController. Напомним, что создавать контроллер нужно из консоли с помощью команды:
 
 ---
 ![Создаем контроллер EmployeeController](./storage/app/private/img/3_0.png "Создаем контроллер EmployeeController")
+
+---
+![Создаем контроллер EmployeeController](./storage/app/private/img/3_1.png "Создаем контроллер EmployeeController")
 
 ---
 
@@ -26,6 +34,9 @@
 
 ---
 ![Функция store](./storage/app/private/img/4_0.png "Функция store")
+
+---
+![Функция store](./storage/app/private/img/4_1.png "Функция store")
 
 ---
 
@@ -37,11 +48,17 @@
 ![web.php](./storage/app/private/img/5_0.png "web.php")
 
 ---
+![web.php](./storage/app/private/img/5_1.png "web.php")
+
+---
 
 ### 6. В файле web.php добавьте ещё один роут с внедрением зависимости параметров запроса в виде id:
 
 ---
 ![web.php](./storage/app/private/img/6_0.png "web.php")
+
+---
+![web.php](./storage/app/private/img/6_1.png "web.php")
 
 ---
 
@@ -52,11 +69,19 @@
 
 ---
 
+![Функция update](./storage/app/private/img/7_1.png "Функция update")
+
+---
 Добавьте новую переменную id. Поместите в неё id из параметров запроса, обновите данные о пользователе: name, email и так далее.
 
 ### 8. Создайте две новые функции getPath(), getUrl(), в которых необходимо получить и записать в переменную путь и URL запроса. Для этого воспользуйтесь встроенными в класс Request методами $request->path() и $request->url();
 
 Данные методы можно вызывать внутри других методов — update и store, чтобы получать служебную информацию о запросе.
+
+---
+![Функции getPath и getUrl](./storage/app/private/img/8_0.png "Функции getPath и getUrl")
+
+---
 
 ### 9. В форму ввода добавьте новое текстовое поле textarea, куда необходимо передавать данные в формате JSON, например:
 
@@ -64,13 +89,30 @@
 ![textarea](./storage/app/private/img/9_0.png "textarea")
 
 ---
+![textarea](./storage/app/private/img/9_1.png "textarea")
+
+---
 
 ### 10. Обновите функции store и update. Преобразуйте полученный из запроса JSON в переменную PHP. Для этого воспользуйтесь методом json_decode().
+
+---
+![Функции store и update](./storage/app/private/img/10_0.png "Функции store и update")
+
+---
+![Функции store и update](./storage/app/private/img/10_1.png "Функции store и update")
+
+---
 
 ### 11. Создайте произвольное количество новых php переменных, в которые поместите отдельные поля из пришедших данных в формате JSON. Например:
 
 ---
 ![новые переменные](./storage/app/private/img/11_0.png "новые переменные")
+
+---
+![новые переменные](./storage/app/private/img/11_1.png "новые переменные")
+
+---
+![новые переменные](./storage/app/private/img/11_2.png "новые переменные")
 
 ---
 
